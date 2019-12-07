@@ -8,20 +8,14 @@
 	<div class="">
 		<h1><a href="/">Django News Project</a></h1>
 	</div>
+{% for post in posts %}
 	<div class="">
-		<p>published: 23.11.2019, 17:45</p>
-		<h2><a href="">My first post</a></h2>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident saepe praesentium fugiat mollitia a culpa cumque, laborum unde fuga eum obcaecati iste nam et atque optio totam. Illum dolore labore magni quos eveniet repellat distinctio ex repellendus pariatur incidunt ducimus assumenda perferendis rem, neque sint, ipsum harum obcaecati eligendi ipsam voluptas nobis dignissimos, ipsa quis! Dicta eligendi quod ipsa odit iure est, illo sint ut at commodi in molestiae, minima rerum fugit nam et. Fugiat accusamus voluptatibus nemo est vero recusandae quae nisi suscipit, id reiciendis aliquid voluptas iste amet labore possimus, quas optio autem eos doloribus consectetur. Labore.
-		</p>
+		<hr>
+		<h2><a href="#">{{ post.title }}</a></h2>
+		<p>{{ post.text|linebreaksbr }}</p>
+		<p>published: {{ post.created_date }}</p>
+		<hr>
 	</div>
-	
-	<div class="">
-		<p>published: 23.11.2019, 17:45</p>
-		<h2><a href="">My first post</a></h2>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident saepe praesentium fugiat mollitia a culpa cumque, laborum unde fuga eum obcaecati iste nam et atque optio totam. Illum dolore labore magni quos eveniet repellat distinctio ex repellendus pariatur incidunt ducimus assumenda perferendis rem, neque sint, ipsum harum obcaecati eligendi ipsam voluptas nobis dignissimos, ipsa quis! Dicta eligendi quod ipsa odit iure est, illo sint ut at commodi in molestiae, minima rerum fugit nam et. Fugiat accusamus voluptatibus nemo est vero recusandae quae nisi suscipit, id reiciendis aliquid voluptas iste amet labore possimus, quas optio autem eos doloribus consectetur. Labore.
-		</p>
-	</div>
+{% endfor %}
 </body>
 </html>

@@ -1,0 +1,39 @@
+/*
+СЕЛЕКТОР {
+	АТРИБУТ:ЗНАЧЕНИЕ;
+	color: HEX;
+}
+
+СЕЛЕКТОР_1 - <ТЕГ>
+СЕЛЕКТОР_2 - КЛАСС
+СЕЛЕКТОР_3 - ID
+*/
+
+body {
+	padding-left: 15px;
+}
+
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 a {
+	color: #54D25C;
+	font-family: 'Russo One', sans-serif;
+}
+
+.page-header {
+	background-color: #ff9400;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;	
+}
+
+.page-header h1, .page-header h1 a {
+	color: #ffffff;
+	font-size: 36pt;
+	text-decoration: none;
+}
+
+.post {
+	margin-bottom:70px;
+}

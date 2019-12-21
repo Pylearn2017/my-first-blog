@@ -1,35 +1,13 @@
-{% load static %}
+{% extends 'blog/base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Django News Project</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Russo+One&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-
-</head>
-<body>
-	<div class="page-header">
-		<h1><a href="/">Django News Project</a></h1>
-	</div>
-		<div class="content container">
-{% for post in posts %}
-			<div class="post">
-				<h2><a href="#">{{ post.title }}</a></h2>
-				<p>{{ post.text|linebreaksbr }}</p>
-				<p>published: {{ post.created_date }}</p>
-				<hr>
-			</div>
-{% endfor %}
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<h2 class = "hover-title"><a href="#">{{ post.title }}</a></h2>
+			<img src="{{ post.image_url }}" alt="">
+			<p>{{ post.text|linebreaksbr }}</p>
+			<p>published: {{ post.created_date }}</p>
+			<hr>
 		</div>
-</body>
-
-Dynamic pages
-
-</html>
-
-$ pip3.6 install --user pythonanywhere
-$ pa_autoconfigure_django.py http://....
+	{% endfor %}
+{% endblock %}
